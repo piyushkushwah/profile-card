@@ -149,15 +149,15 @@
   }
   
   .top-bg{
-    animation: trans 2s forwards;
+    animation: mobtrans 2s forwards;
   }
 
   .bottom-bg{
-    animation: bottomTrans 2s forwards;
+    animation: mobbottomTrans 2s forwards;
   }
 
 
-  @keyframes trans{
+  @keyframes mobtrans{
   from{
     top: 0;
     left: 0;
@@ -168,7 +168,7 @@
   }
 }
 
-@keyframes bottomTrans{
+@keyframes mobbottomTrans{
   from{
       bottom: 0;
       right: 0;
