@@ -40,7 +40,7 @@ function App() {
         <div className="details">
 
           <div className="profile-image-wrapper">
-            <img src={victor} alt="profile" />
+            <img src={'https://source.unsplash.com/weekly?skateboard'} alt="profile" />
           </div>
 
           <div className="user-name">
