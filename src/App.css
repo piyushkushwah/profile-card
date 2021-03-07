@@ -149,12 +149,34 @@
   }
   
   .top-bg{
-    top: -86%;
-    left: -165%;
+    animation: trans 2s forwards;
   }
 
   .bottom-bg{
+    animation: bottomTrans 2s forwards;
+  }
+
+
+  @keyframes trans{
+  from{
+    top: 0;
+    left: 0;
+  }
+  to{
+    top: -86%;
+    left: -165%;
+  }
+}
+
+@keyframes bottomTrans{
+  from{
+      bottom: 0;
+      right: 0;
+  }
+  to{
    top: 48%;
     left: 41%;
   }
+}
+
 }
