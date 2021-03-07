@@ -52,7 +52,7 @@ function App() {
             {
               socialData.map((e, index) => {
                 return (
-                  <div style={{
+                  <div key={index} style={{
                     width: '100%',
                     textAlign: 'center'
                   }}>
