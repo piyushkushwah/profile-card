@@ -1,38 +1,160 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+  background: hsl(185, 75%, 39%);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card{
+  width: 25em;
+  background: white;
+  height: 26em;
+  border-radius: 15px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  animation: scale 2s forwards;
+}
+
+.top-bg,.bottom-bg{
+  position: absolute;
+}
+
+.top-bg{
+  animation: trans 2s forwards;
+}
+
+.bottom-bg{
+  animation: bottomTrans 2s forwards;
+}
+
+.card-pattern,
+.card-pattern img{
+  width: 100%;
+  height: 170px;
+}
+
+.card-pattern img{
+  object-fit: cover;
+}
+
+.profile-image-wrapper{
+  border: 4px solid white;
+  border-radius: 1000px;
+  margin-top: -62px;
+}
+
+.user-name{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider{
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-image-wrapper img{
+  border-radius: 1000px;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-name p{
+  font-size: 0.95rem;
+  color: hsl(227, 10%, 46%);
+}
+
+.social-data-wrapper{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 0.5px solid hsla(227, 10%, 46%, 0.171);
 }
 
-.App-link {
-  color: #61dafb;
+.user-name span{
+  color: hsl(227, 10%, 46%);
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.social-data-wrapper h1,.user-name h1{
+  color: hsl(229, 23%, 23%);
+  font-weight:bolder;
+  font-size: 1.1rem;
+}
+
+.social-data-wrapper p{
+  color: hsl(227, 10%, 46%);
+  font-size: 0.7rem;
+  margin-top: 7px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+}
+
+@keyframes trans{
+  from{
+    top: 0;
+    left: 0;
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    top: -70%;
+    left: -18%;
+  }
+}
+
+@keyframes bottomTrans{
+  from{
+      bottom: 0;
+      right: 0;
+  }
+  to{
+    bottom: -87%;
+    right: -14%;
+  }
+}
+
+@keyframes scale{
+  from{
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .profile-card{
+    width: 80vw;
+  }
+  
+  .top-bg{
+    top: -86%;
+    left: -165%;
+  }
+
+  .bottom-bg{
+   top: 48%;
+    left: 41%;
   }
 }
